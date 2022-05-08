@@ -1,1 +1,3 @@
-INSERT INTO TBL_EMPLOYEES (first_name, last_name, email) VALUES
+INSERT INTO USERS (id, login, password) VALUES
+    ('1', 'admin', '12345'),
+    ('2', 'slave', '123');
