@@ -17,7 +17,6 @@ import java.util.Map;
 public class MainController {
     @Autowired
     private MessageRepo messageRepo;
-
     @GetMapping("/")
     public String greeting (Map<String, Object> model) {
         return "greeting";

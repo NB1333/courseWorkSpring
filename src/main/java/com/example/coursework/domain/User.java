@@ -10,14 +10,19 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "userss")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @NotBlank(message = "Password cannot be empty")
+
     private String username;
+    @NotBlank(message = "Password cannot be empty")
     private String password;
+
+    public boolean isAdmin() {
+        return roles.contains(Role.ADMIN);
+    }
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
