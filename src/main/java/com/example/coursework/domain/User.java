@@ -8,14 +8,12 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Set;
 
-
 @Entity
 @Table(name = "userss")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String username;
     @NotBlank(message = "Password cannot be empty")
     private String password;
