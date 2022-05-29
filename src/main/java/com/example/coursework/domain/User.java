@@ -3,7 +3,6 @@ package com.example.coursework.domain;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.validation.constraints.NotBlank;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Set;
@@ -15,7 +14,6 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String username;
-    @NotBlank(message = "Password cannot be empty")
     private String password;
 
     public boolean isAdmin() {
