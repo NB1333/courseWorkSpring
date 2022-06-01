@@ -1,48 +1,27 @@
 <#import "parts/common.ftlh" as c>
+<#import "parts/login.ftlh" as l>
 
 <@c.page>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <form method="get" action="/main" class="form-inline">
-                <input type="text" name="filter" class="form-control" value="${filter!}" placeholder="Search by theme">
-                <button type="submit" class="btn btn-primary ml-2">Search</button>
-            </form>
-        </div>
+    <div>
+        <form method="post">
+            <input type="text" name="text" placeholder="Введите сообщение" />
+            <input type="text" name="tag" placeholder="Тэг">
+            <button type="submit">Add</button>
+        </form>
     </div>
-
-        <div class="card card-body">
-            <div class="form-group mt-3">
-                <form method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label>
-                            <input type="text" class="form-control" name="text" placeholder="Enter message" />
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" class="form-control" name="tag" placeholder="Theme">
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Enter</button>
-                    </div>
-                </form>
-            </div>
+    <div>Messages</div>
+    <form method="get" action="/main">
+        <input type="text" name="filter" value="${filter}">
+        <button type="submit">Find</button>
+    </form>
+    <#list messages as message>
+        <div>
+            <b>${message.id}</b>
+            <span>${message.text}</span>
+            <i>${message.tag}</i>
+            <strong>${message.authorName}</strong>
         </div>
-
-    <div class="card-columns">
-        <#list messages as message>
-            <div class="card my-3">
-                <div class="m-2">
-                    <span>${message.text}</span>
-                    <i>${message.tag}</i>
-                </div>
-                <div class="card-footer text-muted">
-                    ${message.authorName}
-                </div>
-            </div>
-        <#else>
-            No messages
-        </#list>
-    </div>
+    <#else>
+        No message
+    </#list>
 </@c.page>

@@ -2,28 +2,25 @@
 <#import "login.ftlh" as l>
 
 <nav class="navbar navbar-expand-lg bg-light">
-    <a class="navbar-brand" href="/">Forum</a>
+    <a class="navbar-brand ms-4" href="/">Forum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
+        <ul class="nav me-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/main">Messages</a>
+                <a class="nav-link" href="/main">Message</a>
             </li>
             <#if isAdmin>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user">User list</a>
+                    <a class="nav-link" href="/user">List of users</a>
                 </li>
             </#if>
         </ul>
 
         <div class="navbar-text me-3">${name}</div>
-        <@l.logout />
+        <div class="navbar-text me-3"><@l.logout /></div>
     </div>
 </nav>
