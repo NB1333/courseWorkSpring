@@ -21,7 +21,7 @@ public class Message {
         return roles.contains(Role.ADMIN);
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User author;
 

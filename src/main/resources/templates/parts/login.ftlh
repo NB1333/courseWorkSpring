@@ -7,8 +7,9 @@
         <div class="mb-3">
             <label for="passwordField" class="form-label">Password</label>
             <input type="password" name="password" class="form-control" id="passwordField" placeholder="password">
-        </div><#if !isRegisterForm><a href="/registration">Add new user</a></#if>
-        <button class="btn btn-primary" type="submit"><#if isRegisterForm>Create<#else>Sign In</#if></button>
+        </div>
+        <button class="btn btn-primary me-2" type="submit"><#if isRegisterForm>Create<#else>Sign In</#if></button>
+        <#if !isRegisterForm><a href="/registration">Add new user</a></#if>
     </form>
 </#macro>
 
