@@ -1,7 +1,7 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-    Edit user rights
+    <h2>Edit user rights</h2>
 
     <form action="/user" method="post">
         <#list roles as role>

@@ -16,7 +16,10 @@
             </form>
         </div>
     </div>
-    <div>
+
+<#assign known = Session.SPRING_SECURITY_CONTEXT??>
+<#if known>
+        <div>
         <form method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
@@ -31,6 +34,9 @@
             <button type="submit" class="btn btn-primary mb-4">Add</button>
         </form>
     </div>
+    <#else>
+</#if>
+
     <div><h2>Messages</h2></div>
     <div class="card-columns">
         <#list messages as message>

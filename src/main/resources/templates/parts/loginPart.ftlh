@@ -15,6 +15,6 @@
 
 <#macro logout>
     <form action="/logout" method="post">
-        <button class="btn btn-primary" type="submit">Sign Out</button>
+        <button class="btn btn-primary" type="submit">Sign out</button>
     </form>
 </#macro>
