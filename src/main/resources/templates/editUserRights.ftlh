@@ -4,7 +4,6 @@
     Edit user rights
 
     <form action="/user" method="post">
-        <input type="text" name="username" value="${user.username}">
         <#list roles as role>
             <div>
                 <label>
@@ -13,6 +12,6 @@
             </div>
         </#list>
         <input type="hidden" value="${user.id}" name="userId">
-        <button type="submit">Save</button>
+        <button class="btn btn-primary mt-3" type="submit">Save</button>
     </form>
 </@c.page>

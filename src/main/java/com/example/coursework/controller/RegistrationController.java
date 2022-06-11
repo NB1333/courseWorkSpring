@@ -1,8 +1,8 @@
 package com.example.coursework.controller;
 
-import com.example.coursework.domain.Role;
-import com.example.coursework.domain.User;
-import com.example.coursework.repos.UserRepo;
+import com.example.coursework.models.Role;
+import com.example.coursework.models.User;
+import com.example.coursework.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

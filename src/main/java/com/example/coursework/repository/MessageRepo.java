@@ -1,6 +1,6 @@
-package com.example.coursework.repos;
+package com.example.coursework.repository;
 
-import com.example.coursework.domain.Message;
+import com.example.coursework.models.Message;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

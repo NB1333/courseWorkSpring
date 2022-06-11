@@ -1,6 +1,6 @@
-package com.example.coursework.repos;
+package com.example.coursework.repository;
 
-import com.example.coursework.domain.User;
+import com.example.coursework.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

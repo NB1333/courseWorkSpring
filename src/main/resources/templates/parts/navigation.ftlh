@@ -1,5 +1,5 @@
 <#include "security.ftlh">
-<#import "login.ftlh" as l>
+<#import "loginPart.ftlh" as l>
 
 <nav class="navbar navbar-expand-lg bg-light">
     <a class="navbar-brand ms-4" href="/">Forum</a>
@@ -21,6 +21,9 @@
         </ul>
 
         <div class="navbar-text me-3">${name}</div>
-        <div class="navbar-text me-3"><@l.logout /></div>
+        <#assign known = Session.SPRING_SECURITY_CONTEXT??>
+        <#if known>
+            <div class="navbar-text me-3"><@l.logout /></div>
+        </#if>
     </div>
 </nav>

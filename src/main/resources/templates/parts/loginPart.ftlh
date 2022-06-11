@@ -1,5 +1,5 @@
 <#macro login path isRegisterForm>
-    <form action="${path}" method="post">
+    <form action="/login" method="post">
         <div class="mb-3">
             <label for="usernameField" class="form-label">Username</label>
             <input type="text" name="username" class="form-control" id="usernameField" placeholder="username">

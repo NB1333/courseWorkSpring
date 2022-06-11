@@ -1,4 +1,4 @@
-package com.example.coursework.domain;
+package com.example.coursework.models;
 
 import org.springframework.security.core.GrantedAuthority;
 

@@ -1,5 +1,4 @@
 INSERT INTO userss VALUES
-(1, 'root', '12345'),
-(2, 'car', '789'),
-(3, 'standard', '456'),
-(4, 'admin', '1111');
+(1, 'root', 'root'),
+(2, 'standard', '12345'),
+(3, 'admin', '1111');

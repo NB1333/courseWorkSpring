@@ -1,9 +1,10 @@
 package com.example.coursework.controller;
 
-import com.example.coursework.domain.Message;
-import com.example.coursework.domain.User;
-import com.example.coursework.repos.MessageRepo;
+import com.example.coursework.models.Message;
+import com.example.coursework.models.User;
+import com.example.coursework.repository.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,8 +18,9 @@ import java.util.Map;
 public class MainController {
     @Autowired
     private MessageRepo messageRepo;
+
     @GetMapping("/")
-    public String greeting (Map<String, Object> model) {
+    public String greeting(Map<String, Object> model) {
         return "greeting";
     }
 
